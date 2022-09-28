@@ -14,25 +14,30 @@ const Activity = () => {
     }, []);
     return (
 
-        <div className='activity-container'>
+        <div>
             <div className='header'>
                 <FontAwesomeIcon className='icon' icon={faBook} />
                 <h2>Study-Active-Club</h2>
+
             </div>
             <h4>Select today's Subject to Study</h4>
-            <div className='subjects-container'>
-                {
-                    subjects.map(subject => <Subject
-                        key={subject.id}
-                        subject={subject}
-                    ></Subject>)
-                }
+            <div className='activity-container'>
+                <div className='subjects-container'>
+                    {
+                        subjects.map(subject => <Subject
+                            key={subject.id}
+                            subject={subject}
+                        ></Subject>)
+                    }
+
+                </div>
+                <div className='profile-container'>
+
+
+                </div>
 
             </div>
-            <div className='profile-container'>
 
-
-            </div>
 
 
         </div>

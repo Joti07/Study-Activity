@@ -25,8 +25,16 @@ h4 {
     height: 1.5em;
 }
 
-.activity-container {}
+.activity-container {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
 
-.subjects-container {}
+.subjects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+    margin: 100px 50px;
+}
 
 .profile-container {}
