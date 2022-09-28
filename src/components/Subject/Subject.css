@@ -1,10 +1,32 @@
 .subject {
     width: 300px;
-    height: 510px;
+    height: 490px;
     border: 1px solid #95A0A7;
     border-radius: 8px;
     position: relative;
 }
+
+.btn-list {
+    width: 100%;
+    background-color: violet;
+    color: white;
+    border: none;
+    border-radius: 0px 0px 8px 8px;
+    position: absolute;
+    height: 3.5em;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.btn-list:hover {
+
+    background-color: rgb(135, 56, 135);
+
+}
+
 
 .subject img {
     width: 286px;

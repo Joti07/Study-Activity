@@ -12,7 +12,7 @@ const Subject = (props) => {
                 <p><small>Time:  {time} min</small></p>
 
             </div>
-            <button onClick={() => props.handleAddToCart(props.product)} className='btn-cart'>
+            <button className='btn-list' onClick={() => props.handleAddToList(props.subject)} >
                 <p className='btn-text'>Add to list</p>
 
             </button>

@@ -4,6 +4,7 @@
         "title": "Physics",
         "time": "40",
         "Class": "9 - 12",
+        "quantity": 0,
         "img": "https://png.pngtree.com/png-clipart/20211228/ourlarge/pngtree-background-graphic-physics-transparent-free-png-and-psd-png-image_4097934.png"
     },
     {
@@ -18,6 +19,7 @@
         "title": "English",
         "time": "30",
         "Class": "1 - 12",
+        "quantity": 0,
         "img": "https://t3.ftcdn.net/jpg/03/29/96/96/360_F_329969686_6RJTZpzjYzbCCnYlDNo8z5VJ7seOqfNn.jpg"
     },
     {
@@ -25,6 +27,7 @@
         "title": "Chemistry",
         "time": "50",
         "Class": "8 - 12",
+        "quantity": 0,
         "img": "https://previews.123rf.com/images/artinspiring/artinspiring2003/artinspiring200300756/142896253-chemistry-subject-web-banner-or-landing-page-scientific-experiment.jpg"
     },
     {
@@ -32,6 +35,7 @@
         "title": "Biology",
         "time": "60",
         "Class": "9 - 12",
+        "quantity": 0,
         "img": "https://img.freepik.com/premium-vector/biology-school-subject-concept-botany-lesson-scientist-exploring-nature_277904-8773.jpg?w=2000"
     },
     {
@@ -39,6 +43,7 @@
         "title": "Math",
         "time": "55",
         "Class": "1 - 12",
+        "quantity": 0,
         "img": "https://i.pinimg.com/564x/c8/1b/8e/c81b8eb8df44a0b28de0f9d4dd5c8346.jpg"
     }
 ]
