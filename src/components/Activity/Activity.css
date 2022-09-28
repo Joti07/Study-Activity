@@ -12,6 +12,19 @@ h4 {
 
 }
 
+.header {
+
+    color: violet;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    margin-right: -100px;
+    height: 1.5em;
+}
+
 .activity-container {}
 
 .subjects-container {}

@@ -1,0 +1,23 @@
+.subject {
+    width: 300px;
+    height: 510px;
+    border: 1px solid #95A0A7;
+    border-radius: 8px;
+    position: relative;
+}
+
+.subject img {
+    width: 286px;
+    height: 286px;
+    border-radius: 8px;
+    margin: 7px;
+}
+
+.subject-info {
+    padding: 12px;
+    margin: 0 5px;
+}
+
+.btn-text {
+    margin: 5px;
+}
