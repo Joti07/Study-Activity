@@ -20,7 +20,7 @@ const SubjectList = (props) => {
             hideProgressBar: false
         });
         // localStorage.setItem('study-cart', JSON.stringify(' '));
-        localStorage.setItem('break-time', 0);
+        // localStorage.setItem('break-time', 0);
         // window.location.reload(false);
     }
 
