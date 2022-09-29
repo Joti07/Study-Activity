@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './SubjectList.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SubjectList = (props) => {
     const { list, breakTime } = props;
@@ -10,16 +12,18 @@ const SubjectList = (props) => {
         total = total + subject.time * subject.quantity;
     }
 
-
+    const handleClick = () => {
+        toast.success("Activity Completed !!", {
+            position: "top-center",
+            autoClose: 1000,
+            hideProgressBar: false
+        });
+    }
 
 
     return (
         <div >
             <div>
-                {/* {
-                    // breakTime.map(time => <li>{time.Time} min</li>)
-                    breakTime.map(time => console.log(time))
-                } */}
                 <li className='break-time' onClick={() => props.handleAddToBreak(10)}><span id='time'>10</span>min</li>
                 <li className='break-time' onClick={() => props.handleAddToBreak(20)}><span id='time'>20</span>min</li>
                 <li className='break-time' onClick={() => props.handleAddToBreak(30)}><span id='time'>30</span>min</li>
@@ -32,6 +36,8 @@ const SubjectList = (props) => {
                 <p>Total Time: {total}</p>
                 <p className='break-feild'>Break Time: {breakTime}</p>
             </div>
+            <button onClick={handleClick}>Activity Complete</button>
+            <ToastContainer />
         </div>
     );
 };
