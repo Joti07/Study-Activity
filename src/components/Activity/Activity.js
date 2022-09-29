@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBook } from '@fortawesome/free-solid-svg-icons';
+
 import './Activity.css'
 import Subject from '../Subject/Subject';
 import SubjectList from '../SubjectList/SubjectList';
 import { addToDb, getStoredCart, getBreakTime } from '../../utilities/fakedb';
+import Header from '../Header/Header';
 
 const Activity = () => {
 
@@ -68,38 +68,35 @@ const Activity = () => {
 
     return (
 
-        <div>
-            <div className='header'>
-                <FontAwesomeIcon className='icon' icon={faBook} />
-                <h2>Study-Active-Club</h2>
+
+
+
+        <div className='activity-container'>
+
+            <div className='subjects-container'>
+                {
+                    subjects.map(subject => <Subject
+                        key={subject.id}
+                        handleAddToList={handleAddToList}
+                        subject={subject}
+                    ></Subject>)
+                }
 
             </div>
-            <h4>Select today's Subject to Study</h4>
-            <div className='activity-container'>
-                <div className='subjects-container'>
-                    {
-                        subjects.map(subject => <Subject
-                            key={subject.id}
-                            handleAddToList={handleAddToList}
-                            subject={subject}
-                        ></Subject>)
-                    }
+            <div className='profile-container'>
+                <SubjectList
+                    list={list}
+                    breakTime={breakTime}
+                    handleAddToBreak={handleAddToBreak}
 
-                </div>
-                <div className='profile-container'>
-                    <SubjectList
-                        list={list}
-                        breakTime={breakTime}
-                        handleAddToBreak={handleAddToBreak}
-
-                    > </SubjectList>
-                </div>
-
+                > </SubjectList>
             </div>
-
-
 
         </div>
+
+
+
+
     );
 };
 

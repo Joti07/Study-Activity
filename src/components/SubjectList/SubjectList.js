@@ -19,9 +19,9 @@ const SubjectList = (props) => {
             autoClose: 1000,
             hideProgressBar: false
         });
-        localStorage.setItem('study-cart', JSON.stringify(' '));
+        // localStorage.setItem('study-cart', JSON.stringify(' '));
         localStorage.setItem('break-time', 0);
-        window.location.reload(false);
+        // window.location.reload(false);
     }
 
 

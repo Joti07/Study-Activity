@@ -1,0 +1,17 @@
+.FAQ div {
+    width: 50%;
+    height: 20%;
+    border: 1px solid #95A0A7;
+    border-radius: 8px;
+    background-color: rgb(239, 215, 250);
+    margin-left: 10%;
+    margin-bottom: 2%;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.FAQ h1 {
+    margin-left: 40%;
+}
