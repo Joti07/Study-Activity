@@ -1,3 +1,30 @@
 .break-time:hover {
     background-color: blueviolet;
 }
+
+.cart {
+    position: sticky;
+    top: 0;
+    padding: 30px 20px;
+}
+
+.btn {
+    width: 50%;
+    background-color: rgb(175, 59, 175);
+    color: white;
+    border: none;
+    border-radius: 8px 8px 8px 8px;
+    position: absolute;
+    height: 3.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:hover {
+    background-color: blueviolet;
+}
+
+.profile {
+    color: blueviolet;
+}

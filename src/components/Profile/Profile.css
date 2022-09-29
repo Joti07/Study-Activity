@@ -1,0 +1,26 @@
+.personal-info {
+    display: flex;
+    margin-top: -3em;
+}
+
+.info {
+    padding-top: 2.5em;
+    margin-left: -6em;
+}
+
+.personal-info p {
+    margin-left: 2em;
+
+}
+
+.age {
+    padding-left: -50em;
+}
+
+.profile {
+    color: blueviolet;
+}
+
+.loc {
+    margin-top: -1em;
+}

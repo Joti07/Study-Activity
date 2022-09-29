@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './SubjectList.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Profile from '../Profile/Profile';
 
 const SubjectList = (props) => {
     const { list, breakTime } = props;
@@ -18,25 +19,31 @@ const SubjectList = (props) => {
             autoClose: 1000,
             hideProgressBar: false
         });
+        localStorage.setItem('study-cart', JSON.stringify(' '));
+        localStorage.setItem('break-time', 0);
+        window.location.reload(false);
     }
 
 
     return (
-        <div >
-            <div>
-                <li className='break-time' onClick={() => props.handleAddToBreak(10)}><span id='time'>10</span>min</li>
-                <li className='break-time' onClick={() => props.handleAddToBreak(20)}><span id='time'>20</span>min</li>
-                <li className='break-time' onClick={() => props.handleAddToBreak(30)}><span id='time'>30</span>min</li>
-                <li className='break-time' onClick={() => props.handleAddToBreak(40)}><span id='time'>40</span>min</li>
+        <div className='cart'>
+            <Profile></Profile>
+            <h2 className='profile'>Break Time</h2>
+            <div >
+                <li className='break-time' onClick={() => props.handleAddToBreak(10)}> 10 <small> min</small></li>
+                <li className='break-time' onClick={() => props.handleAddToBreak(20)}> 20 <small> min</small></li>
+                <li className='break-time' onClick={() => props.handleAddToBreak(30)}> 30 <small> min</small></li>
+                <li className='break-time' onClick={() => props.handleAddToBreak(40)}> 40 <small> min</small></li>
+                <li className='break-time' onClick={() => props.handleAddToBreak(50)}> 50 <small> min</small></li>
 
             </div>
-            <div className='cart'>
-                <h4>List Summary</h4>
-                <p>Selected Items: {quantity}</p>
-                <p>Total Time: {total}</p>
+            <div >
+                <h2 className='profile'>Study Details</h2>
+                {/* <p>Selected Items: {quantity}</p> */}
+                <p>Study Time: {total}</p>
                 <p className='break-feild'>Break Time: {breakTime}</p>
             </div>
-            <button onClick={handleClick}>Activity Complete</button>
+            <button className='btn' onClick={handleClick}>Activity Complete</button>
             <ToastContainer />
         </div>
     );

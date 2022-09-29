@@ -1,4 +1,4 @@
-h2 {
+.header h2 {
     margin-left: 5em;
     margin-bottom: 2em;
     margin-top: 1em;
@@ -37,4 +37,6 @@ h4 {
     margin: 100px 50px;
 }
 
-.profile-container {}
+.profile-container {
+    background-color: rgba(216, 191, 218, 0.96);
+}
