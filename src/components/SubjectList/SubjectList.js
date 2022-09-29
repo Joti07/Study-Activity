@@ -37,11 +37,11 @@ const SubjectList = (props) => {
                 <li className='break-time' onClick={() => props.handleAddToBreak(50)}> 50 <small> min</small></li>
 
             </div>
-            <div >
+            <div className='study-details'>
                 <h2 className='profile'>Study Details</h2>
                 {/* <p>Selected Items: {quantity}</p> */}
                 <p>Study Time: {total}</p>
-                <p className='break-feild'>Break Time: {breakTime}</p>
+                <p >Break Time: {breakTime}</p>
             </div>
             <button className='btn' onClick={handleClick}>Activity Complete</button>
             <ToastContainer />

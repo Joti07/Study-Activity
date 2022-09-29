@@ -3,8 +3,6 @@
 }
 
 .cart {
-    position: sticky;
-    top: 0;
     padding: 30px 20px;
 }
 
@@ -27,4 +25,12 @@
 
 .profile {
     color: blueviolet;
+}
+
+@media only screen and (max-width: 700px) {
+    .profile {
+        margin-bottom: -10%;
+        font-size: 1em;
+    }
+
 }

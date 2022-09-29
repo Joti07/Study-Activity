@@ -5,7 +5,7 @@ const Profile = () => {
     return (
         <div>
             <h2 className='profile'>Profile</h2>
-            <h3>Name: Tanjila Joti</h3>
+            <h3 className='name'>Name: Tanjila Joti</h3>
             <p className='loc'>Dhaka, Bangladesh</p>
 
             <div className='info'>
