@@ -4,17 +4,21 @@ import { faBook } from '@fortawesome/free-solid-svg-icons';
 import './Activity.css'
 import Subject from '../Subject/Subject';
 import SubjectList from '../SubjectList/SubjectList';
-import { addToDb, getStoredCart } from '../../utilities/fakedb';
+import { addToDb, getStoredCart, getBreakTime } from '../../utilities/fakedb';
 
 const Activity = () => {
+
+    // add subject 
     const [subjects, setSubjects] = useState([]);
     const [list, setList] = useState([]);
+
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
             .then(data => setSubjects(data))
 
     }, []);
+
     useEffect(() => {
         const storedCart = getStoredCart();
         const savedCart = [];
@@ -44,6 +48,24 @@ const Activity = () => {
         setList(newCart);
         addToDb(SelectedSubject.id);
     };
+    //-------------------------------------------------------------------------------------------------------
+    // for break time
+    let [breakTime, setBreakTime] = useState([]);
+    const handleAddToBreak = (value) => {
+        // console.log(value);
+        breakTime = value;
+        localStorage.setItem('break-time', JSON.stringify(breakTime));
+        setBreakTime(breakTime);
+
+    }
+    useEffect(() => {
+        const storedCart = localStorage.getItem('break-time');
+        //console.log(storedCart);
+        setBreakTime(storedCart);
+    }, [breakTime]);
+
+
+
     return (
 
         <div>
@@ -65,7 +87,12 @@ const Activity = () => {
 
                 </div>
                 <div className='profile-container'>
-                    <SubjectList list={list}> </SubjectList>
+                    <SubjectList
+                        list={list}
+                        breakTime={breakTime}
+                        handleAddToBreak={handleAddToBreak}
+
+                    > </SubjectList>
                 </div>
 
             </div>
